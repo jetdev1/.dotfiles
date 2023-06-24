@@ -24,6 +24,10 @@ brew install \
 	bat \
     xclip
 
+# stow
+stow zsh 
+stow nvim
+
 # add zsh to valid login shells
 command -v zsh | sudo tee -a /etc/shells
 
@@ -35,6 +39,7 @@ antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
 
 # .zshrc
 source ~/.zsh_plugins.zsh
+source .zshrc
 
 # install gcc (the brew version doesn't work well with treesitter for some reason)
 sudo apt-get install gcc -y
