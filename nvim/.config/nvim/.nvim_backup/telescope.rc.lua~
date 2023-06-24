@@ -1,0 +1,21 @@
+require('telescope').setup {
+    extensions = {
+        file_browser = {
+            theme = "everforest",
+            hijack_netrw = true
+        }
+    },
+
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    },
+
+    defaults = {
+        file_ignore_patterns = {"^.git/", "^venv/"}
+    }
+}
+
+
+require("telescope").load_extension "file_browser"

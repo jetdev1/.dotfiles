@@ -1,0 +1,16 @@
+def candysets(N: int):
+    """
+    Given that adding 2 odd numbers together will always result in
+    an even number, we can derive if there are an odd or even
+    number of packets of candies. Furthermore, they must be 
+    consecutive.
+
+    The first set may not always be the sum starting from 1.
+    The number of elememnts in a sum is n // 2.
+    sum = (n // 2)(ar[0] + arr[len() - 1]) / 2
+
+    The number of elements removed at the head must be odd.
+    """
+
+    div = 2 if N % 2 else 3
+    

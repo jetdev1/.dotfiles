@@ -1,0 +1,48 @@
+local status, packer = pcall(require, "packer")
+if (not status) then
+	print("Packer is not installed.")
+	return
+end
+
+packer.startup(function(use)
+	use 'wbthomason/packer.nvim'        -- Packer can manage itself as an optional plugin
+    use 'mhinz/vim-startify'
+    use 'romgrk/barbar.nvim'
+    use 'luisiacc/gruvbox-baby'
+	use {
+	  'kyazdani42/nvim-tree.lua',       -- File tree viewer
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icons
+	  },
+	}
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+    }
+    use 'folke/which-key.nvim'
+
+    -- [[LSP]]
+    use 'neovim/nvim-lspconfig'
+    use {
+      'glepnir/lspsaga.nvim',
+      branch = 'main'
+    }
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
+
+    -- [[ Auto brackets ]]
+    use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-ts-autotag'
+
+    -- [[ git ]]
+    use 'lewis6991/gitsigns.nvim'
+
+end)

@@ -1,0 +1,7 @@
+require'lspconfig'.pyright.setup{
+  on_attach = function()
+    -- Set K to lsp hover function in normal mode for current buffer.
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
+  end,
+}

@@ -1,0 +1,13 @@
+require('telescope').setup {
+    defaults = {
+        file_ignore_patterns = { ".git/", "dotfiles/", "fish/" }
+    },
+    extensions = {
+        file_browser = {
+            hijack_netrw = true
+        }
+    }
+}
+
+
+require("telescope").load_extension "file_browser"
