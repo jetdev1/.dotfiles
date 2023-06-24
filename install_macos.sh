@@ -1,13 +1,12 @@
 # install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# 
 # install packages and apps from brew
 brew install  \
 	gcc \
 	make \
 	cmake \
-	zsh \
 	antidote \
 	git \
 	neovim \
@@ -19,29 +18,28 @@ brew install  \
 	gh \
 	node \
 	bat \
-    adobe-creative-cloud \
-    basictex \
-    bambu-studio \
-    discord \
-    font-awesome-terminal-fonts \
-    iterm2 \
-    jellyfin-media-player \
-    microsoft-auto-update \
-    microsoft-powerpoint \
-    microsoft-teams \
-    microsoft-word \
-    notion \
-    numi \
-    obsidian \
-    orcaslicer \
-    rectangle \
-    spotify \
-    telegram-desktop \
-    ticktick \
-    typst \
-    via \
-    visual-studio-code \
-    vlc \
+	adobe-creative-cloud \
+	basictex \
+	bambu-studio \
+	discord \
+	iterm2 \
+	jellyfin-media-player \
+	microsoft-auto-update \
+	microsoft-powerpoint \
+	microsoft-teams \
+	microsoft-word \
+	notion \
+	numi \
+	obsidian \
+	orcaslicer \
+	rectangle \
+	spotify \
+	telegram-desktop \
+	ticktick \
+	typst \
+	via \
+	visual-studio-code \
+	vlc
 
 # stow
 stow zsh 

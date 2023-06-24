@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # aliases
 alias llt="exa -T --icons"
@@ -14,7 +14,7 @@ alias py='python3'
 alias cs='clear'
 alias ve='source venv/bin/activate'
 alias dve='deactivate'
-PATH="/home/linuxbrew/.linuxbrew/opt/make/libexec/gnubin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"
 
 # Create portable python venv
 cve () {
@@ -28,7 +28,7 @@ fixpip () {
 }
 
 # source antidote
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
