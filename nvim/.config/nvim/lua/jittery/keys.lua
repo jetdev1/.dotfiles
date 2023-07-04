@@ -19,6 +19,7 @@ map('n', '<leader>fr', '<cmd>w<cr><cmd>luafile %<cr>')    -- Refresh lua file
 map('n', '<leader>fa', '<cmd>wqa<CR>')                    -- Save files and quit neovim
 map('n', '<leader>fd', '<cmd>q!<CR>')                     -- Discard changes
 map('n', '<leader>op', "<cmd>w<cr><cmd>call system('/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD ' . expand('%:p') . ' 2> /dev/null &')<cr>")
+map('i', '<Tab>', '<Tab>')
 
 
 -- [[ Telescope ]]

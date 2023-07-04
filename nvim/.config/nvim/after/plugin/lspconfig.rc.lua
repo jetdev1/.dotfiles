@@ -1,32 +1,33 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local protocol = require('vim.lsp.protocol')
 protocol.CompletionItemKind = {
-  '', -- Text
-  '', -- Method
-  '', -- Function
-  '', -- Constructor
-  '', -- Field
-  '', -- Variable
-  '', -- Class
-  'ﰮ', -- Interface
-  '', -- Module
-  '', -- Property
-  '', -- Unit
-  '', -- Value
-  '', -- Enum
-  '', -- Keyword
-  '﬌', -- Snippet
-  '', -- Color
-  '', -- File
-  '', -- Reference
-  '', -- Folder
-  '', -- EnumMember
-  '', -- Constant
-  '', -- Struct
-  '', -- Event
-  'ﬦ', -- Operator
-  '', -- TypeParameter
+      Text = "󰉿",
+      Method = "󰆧",
+      Function = "󰊕",
+      Constructor = "",
+      Field = "󰜢",
+      Variable = "󰀫",
+      Class = "󰠱",
+      Interface = "",
+      Module = "",
+      Property = "󰜢",
+      Unit = "󰑭",
+      Value = "󰎠",
+      Enum = "",
+      Keyword = "󰌋",
+      Snippet = "",
+      Color = "󰏘",
+      File = "󰈙",
+      Reference = "󰈇",
+      Folder = "󰉋",
+      EnumMember = "",
+      Constant = "󰏿",
+      Struct = "󰙅",
+      Event = "",
+      Operator = "󰆕",
+      TypeParameter = "",
 }
+
 
 local lsp = vim.lsp
 local handlers = lsp.handlers
@@ -37,6 +38,12 @@ handlers["textDocument/hover"] = lsp.with(handlers.hover, pop_opts)
 handlers["textDocument/signatureHelp"] = lsp.with(handlers.signature_help, pop_opts)
 
 require'lspconfig'.pyright.setup{
+  capabilities = capabilities,
+  on_attach = function()
+  end,
+}
+
+require'lspconfig'.yamlls.setup{
   capabilities = capabilities,
   on_attach = function()
   end,
@@ -82,6 +89,13 @@ require('lspconfig').openscad_lsp.setup{
   end,
 }
 
+require'lspconfig'.typst_lsp.setup{
+	settings = {
+		exportPdf = "onSave" -- Choose onType, onSave or never.
+        -- serverPath = "" -- Normally, there is no need to uncomment it.
+	}
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
        vim.lsp.diagnostic.on_publish_diagnostics, {
          underline = true,
@@ -90,7 +104,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
        }
      )
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = "", Warn = "", Hint = "", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })

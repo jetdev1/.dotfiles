@@ -22,7 +22,7 @@ ts.setup {
     "html",
     "lua",
     "markdown",
-    "markdown_inline"
+    "markdown_inline",
   },
   autotag = {
     enable = true,

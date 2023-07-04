@@ -11,6 +11,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 alias llt="exa -T --icons"
 alias nv='nvim'
 alias py='python3'
+alias gs='git status'
 alias cs='clear'
 alias ve='source venv/bin/activate'
 alias dve='deactivate'

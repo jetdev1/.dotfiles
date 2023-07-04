@@ -56,15 +56,22 @@ require('lazy').setup(({
     'saadparwaiz1/cmp_luasnip',
 
     'konfekt/vim-compilers',
+    {
+      'kaarmu/typst.vim',
+      ft = 'typst',
+      lazy=true 
+    },
 
     -- [[ Telescope ]]
     'nvim-telescope/telescope.nvim',
     'nvim-lua/plenary.nvim',
-    {'nvim-telescope/telescope-fzf-native.nvim',
-    build =  'make'},
     {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+      'nvim-telescope/telescope-fzf-native.nvim',
+      build =  'make'
+    },
+    {
+      "nvim-telescope/telescope-file-browser.nvim",
+      dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     },
 
     -- [[ Editor ]]
