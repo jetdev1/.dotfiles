@@ -35,7 +35,7 @@ map('n', '<C-k>', "<cmd>lua vim.diagnostic.goto_prev({popup_opts={focusable=fals
 map('n', '<C-j>', "<cmd>lua vim.diagnostic.goto_next({popup_opts={focusable=false,border='rounded'}})<CR>")
 map('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<CR>')  -- Rename variable
 map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-map('n', '<leader>dh', ':lua vim.diagnostic.hide()<CR>')
+map('n', '<leader>dh', ':lua vim.diagnostic.disable()<CR>')
 map('n', '<leader>ds', ':lua vim.diagnostic.show()<CR>')
 
 -- [[ Window ]]
