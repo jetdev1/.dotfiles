@@ -15,6 +15,10 @@ alias gs='git status'
 alias cs='clear'
 alias ve='source venv/bin/activate'
 alias dve='deactivate'
+alias nf='neofetch'
+alias mpr='mpremote'
+alias brewup='brew upgrade $(brew outdated --cask --greedy --quiet)'
+alias brewout='brew outdated --cask --greedy'
 PATH="/opt/homebrew/bin:$PATH"
 
 # Create portable python venv
@@ -38,3 +42,6 @@ antidote load
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias ll="exa --header --long --all --icons --git"
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
