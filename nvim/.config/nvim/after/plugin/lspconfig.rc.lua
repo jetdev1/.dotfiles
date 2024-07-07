@@ -89,12 +89,7 @@ require('lspconfig').openscad_lsp.setup{
   end,
 }
 
-require'lspconfig'.typst_lsp.setup{
-	settings = {
-		exportPdf = "onSave" -- Choose onType, onSave or never.
-        -- serverPath = "" -- Normally, there is no need to uncomment it.
-	}
-}
+require'lspconfig'.tinymist.setup{}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
        vim.lsp.diagnostic.on_publish_diagnostics, {

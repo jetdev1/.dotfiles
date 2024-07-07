@@ -22,6 +22,7 @@ map('n', '<leader>op', "<cmd>w<cr><cmd>call system('/Applications/OpenSCAD.app/C
 map('i', '<Tab>', '<Tab>')
 
 
+
 -- [[ Telescope ]]
 map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files"..
     "({hidden=true, search_dirs={'~/.config', '.'}, find_command={'fd'}})<CR>")

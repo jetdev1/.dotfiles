@@ -44,9 +44,8 @@ require('lazy').setup(({
 	    dependencies = {
 		    'williamboman/mason.nvim',
 		    'williamboman/mason-lspconfig.nvim'
+      },
     },
-    },
-    
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
@@ -56,11 +55,6 @@ require('lazy').setup(({
     'saadparwaiz1/cmp_luasnip',
 
     'konfekt/vim-compilers',
-    {
-      'kaarmu/typst.vim',
-      ft = 'typst',
-      lazy=true 
-    },
 
     -- [[ Telescope ]]
     'nvim-telescope/telescope.nvim',
@@ -85,7 +79,15 @@ require('lazy').setup(({
     -- [[ Markdown ]]
     ({ "iamcco/markdown-preview.nvim", build = "cd app && npm install",
         init = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" }, })
+        ft = { "markdown" }, }),
+
+    {
+    -- [[ typst ]]
+      'chomosuke/typst-preview.nvim',
+      ft = 'typst',
+      version = '0.3.*',
+      build = function() require 'typst-preview'.update() end,
+    }
 }))
 
 -- remove this if there's an issue

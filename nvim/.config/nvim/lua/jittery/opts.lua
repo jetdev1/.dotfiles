@@ -14,6 +14,7 @@ opt.number = true                -- Show line numbers
 opt.showmode = false             -- Hide mode indicator
 opt.relativenumber = true        -- Use relative line numbers
 opt.scrolloff = 10               -- Minimum lines shown beneath cursor
+opt.smoothscroll = true
 opt.signcolumn = "yes"           -- Show the sign column
 opt.lazyredraw = true            -- Enable lazy redraw
 opt.termguicolors = true         -- Enable true color in the terminal

@@ -21,6 +21,43 @@ alias brewup='brew upgrade $(brew outdated --cask --greedy --quiet)'
 alias brewout='brew outdated --cask --greedy'
 PATH="/opt/homebrew/bin:$PATH"
 
+# move latest file from screenshot to current directory
+
+# Function to find and move the newest file
+move_newest_file() {
+    local new_name=$1
+    local desktop_dir=~/Desktop
+    local current_dir=$(pwd)
+
+    # Find the newest file on the desktop
+    local newest_file=$(ls -t $desktop_dir/* 2> /dev/null | head -n 1)
+
+    if [[ -z $newest_file ]]; then
+        echo "No files found on the desktop."
+        return 1
+    fi
+
+    # Move and rename the file to the current directory
+    mv "$newest_file" "$current_dir/$new_name"
+    
+    if [[ $? -eq 0 ]]; then
+        echo "Moved and renamed file to $current_dir/$new_name"
+    else
+        echo "Failed to move and rename the file."
+    fi
+}
+
+mf() {
+    # Check if the user provided a new name for the file
+    if [[ -z $1 ]]; then
+        echo "Usage: $0 <new_filename>"
+    else
+        # Call the function with the user-specified name
+        move_newest_file "$1"
+    fi
+
+}
+
 # Create portable python venv
 cve () {
     python3 -m venv --copies venv
