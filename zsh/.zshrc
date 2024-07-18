@@ -8,7 +8,7 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # aliases
-alias llt="exa -T --icons"
+alias llt="eza -T --icons"
 alias nv='nvim'
 alias py='python3'
 alias gs='git status'
@@ -77,7 +77,7 @@ antidote load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias ll="exa --header --long --all --icons --git"
+alias ll="eza --header --long --all --icons --git"
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
