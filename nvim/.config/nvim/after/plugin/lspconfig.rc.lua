@@ -1,5 +1,6 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local protocol = require('vim.lsp.protocol')
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 protocol.CompletionItemKind = {
       Text = "󰉿",
       Method = "󰆧",
@@ -89,7 +90,12 @@ require('lspconfig').openscad_lsp.setup{
   end,
 }
 
-require'lspconfig'.tinymist.setup{}
+require'lspconfig'.tinymist.setup{
+  capabilities = capabilities,
+  root_dir = function (fname)
+    return vim.loop.cwd()
+  end
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
        vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -142,3 +148,4 @@ sources = cmp.config.sources({
   { name = 'buffer' },
 })
 })
+
