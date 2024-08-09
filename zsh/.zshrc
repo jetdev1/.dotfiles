@@ -17,7 +17,7 @@ alias ve='source venv/bin/activate'
 alias dve='deactivate'
 alias nf='neofetch'
 alias mpr='mpremote'
-alias brewup='brew upgrade $(brew outdated --cask --greedy --quiet)'
+alias brewup='brew upgrade $(brew outdated --cask --greedy --quiet) --cask'
 alias brewout='brew outdated --cask --greedy'
 PATH="/opt/homebrew/bin:$PATH"
 
