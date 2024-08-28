@@ -17,10 +17,10 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
     dashboard.button( "l", "  > Last Session", "<CMD>SessionManager load_last_session<CR>"),
     dashboard.button( "e", "  > New File" , "<CMD>ene <BAR> startinsert <CR>"),
-    dashboard.button( "f", "  > Find File", "<cmd>lua require('telescope.builtin').find_files"..
-    "({hidden=true, search_dirs={'~/Projects', '~/.config'}, find_command={'fd'}})<CR>"),
+    dashboard.button( "f", "󰈞  > Find File", "<cmd>lua require('telescope.builtin').find_files"..
+    "({hidden=true, find_command={'fd'}})<CR>"),
     dashboard.button( "r", "  > Recent"   , "<CMD>Telescope oldfiles<CR>"),
-    dashboard.button( "q", "  > Quit NVIM", "<CMD>qa<CR>"),
+    dashboard.button( "q", "󰅙  > Quit NVIM", "<CMD>qa<CR>"),
 }
 
 -- Set footer
