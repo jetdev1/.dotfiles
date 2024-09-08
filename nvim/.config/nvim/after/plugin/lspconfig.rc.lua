@@ -50,7 +50,7 @@ require'lspconfig'.yamlls.setup{
   end,
 }
 
-require'lspconfig'.tsserver.setup {
+require'lspconfig'.ts_ls.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities,
