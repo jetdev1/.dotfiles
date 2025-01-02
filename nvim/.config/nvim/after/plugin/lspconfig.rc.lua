@@ -58,6 +58,8 @@ require'lspconfig'.ts_ls.setup {
   end,
 }
 
+require'lspconfig'.clangd.setup{}
+
 require'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {
