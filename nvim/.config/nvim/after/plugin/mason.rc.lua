@@ -8,6 +8,6 @@ mason.setup({
 })
 
 lspconfig.setup {
-  ensure_installed = { 'lua_ls', 'pyright', 'tinymist', 'yamlls' },
+  ensure_installed = { 'lua_ls', 'pyright', 'tinymist', 'yamlls', 'clangd' },
   automatic_installation = true
 }

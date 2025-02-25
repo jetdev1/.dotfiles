@@ -10,6 +10,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # aliases
 alias llt="eza -T --icons"
 alias nv='nvim'
+alias nnv='NVIM_APPNAME=new nvim'
 alias py='python3'
 alias gs='git status'
 alias cs='clear'

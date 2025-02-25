@@ -8,7 +8,7 @@ ts.setup {
   },
   indent = {
     enable = true,
-    disable = {'python'},
+    disable = {},
   },
   ensure_installed = {
     "python",
@@ -23,6 +23,7 @@ ts.setup {
     "lua",
     "markdown",
     "markdown_inline",
+    "c"
   },
   autotag = {
     enable = true,
